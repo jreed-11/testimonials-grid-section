@@ -1,3 +1,11 @@
+:root {
+  /* Primary colors */
+  --card-colour-violet: hsl(263, 55%, 52%);
+  --card-colour-grayblue: hsl(217, 19%, 35%);
+  --card-colour-blackblue: hsl(219, 29%, 14%);
+  --card-colour-white: hsl(0, 0%, 100%);
+}
+
 *,
 *::before,
 *::after {
@@ -8,4 +16,67 @@
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding-top: 16.4rem;
+}
+
+.main-container {
+  border: 1px solid purple;
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "card--large card--large card--small card--small"
+    "card--small card--large card--large card--small";
+  margin: 0 auto;
+  max-width: 111rem;
+}
+
+.card--small {
+  /* grid-area: card--small; */
+  max-width: 25.5rem;
+}
+.card--large {
+  /* grid-area: card--large; */
+  max-width: 54rem;
+}
+
+.card--txt--colour {
+  color: white;
+}
+
+.card--colour--violet {
+  background-color: var(--card-colour-violet);
+}
+.card--colour--grayblue {
+  background-color: var(--card-colour-grayblue);
+}
+.card--colour--blackblue {
+  background-color: var(--card-colour-blackblue);
+}
+.card--colour--white {
+  background-color: var(--card-colour-white);
+}
+
+.person__container {
+  border: 1px solid peru;
+  padding: 2.6rem 3.2rem 3.2rem;
+}
+
+.name__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.person__photo {
+  border-radius: 50%;
+  max-width: 2.8rem;
+}
+
+.person__details__container {
+  display: flex;
 }
