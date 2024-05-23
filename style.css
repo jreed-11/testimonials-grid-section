@@ -26,23 +26,41 @@ body {
 .main-container {
   border: 1px solid purple;
   display: grid;
-  gap: 2.4rem;
+  gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
-    "card--large card--large card--small card--small"
-    "card--small card--large card--large card--small";
+    "card-dan card-dan card-jon card-kira"
+    "card-jean card-pat card-pat card-kira";
   margin: 0 auto;
   max-width: 111rem;
 }
 
 .card--small {
-  /* grid-area: card--small; */
   max-width: 25.5rem;
 }
 .card--large {
-  /* grid-area: card--large; */
   max-width: 54rem;
+}
+
+.card-dan {
+  grid-area: card-dan;
+}
+
+.card-jon {
+  grid-area: card-jon;
+}
+
+.card-kira {
+  grid-area: card-kira;
+}
+
+.card-jean {
+  grid-area: card-jean;
+}
+
+.card-pat {
+  grid-area: card-pat;
 }
 
 .card--txt--colour {
@@ -79,4 +97,12 @@ body {
 
 .person__details__container {
   display: flex;
+}
+
+.card__text {
+  font-size: 2rem;
+  padding-bottom: 2.4rem;
+}
+.card__quote {
+  font-size: 1.4rem;
 }
