@@ -39,6 +39,7 @@ body {
     "card-jean card-pat card-pat card-kira";
   margin: 0 auto;
   max-width: 111rem;
+  position: relative;
   /* min-height: 57.2rem; */
 }
 
@@ -99,6 +100,16 @@ body {
   display: flex;
   gap: 1.7rem;
   padding-bottom: 1.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dan__quotes__img {
+  max-width: 10.4rem;
+  position: absolute;
+  left: 68%;
+  top: -25px;
+  z-index: -1;
 }
 
 .name__details {
@@ -109,6 +120,14 @@ body {
 .person__photo {
   border-radius: 50%;
   max-width: 2.8rem;
+}
+
+.person__photo--pat {
+  border: 2px solid #733fc8;
+}
+
+.person__photo--dan {
+  border: 2px solid #a775f1;
 }
 
 .name {
@@ -128,6 +147,8 @@ body {
   font-size: 2rem;
   font-weight: 600;
   padding-bottom: 2.4rem;
+  position: relative;
+  z-index: 3;
 }
 
 /* Maedia Queries */
@@ -141,5 +162,20 @@ body {
 
   .card {
     max-width: 32.8rem;
+  }
+
+  .dan__quotes__img {
+    left: 65%;
+  }
+
+  .card-pat:nth-of-type(5) {
+    order: 4;
+  }
+
+  .card-jean:nth-of-type(4) {
+    order: 3;
+  }
+  .card-kira:nth-of-type(3) {
+    order: 5;
   }
 }
