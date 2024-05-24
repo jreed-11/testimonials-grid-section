@@ -4,6 +4,9 @@
   --card-colour-grayblue: hsl(217, 19%, 35%);
   --card-colour-blackblue: hsl(219, 29%, 14%);
   --card-colour-white: hsl(0, 0%, 100%);
+
+  /* Neutral */
+  --main-bg-colour: hsl(210, 46%, 95%);
 }
 
 *,
@@ -19,12 +22,13 @@ html {
 }
 
 body {
+  background-color: var(--main-bg-colour);
   font-family: "Barlow Semi Condensed", sans-serif;
-  padding-top: 16.4rem;
+  padding: 16.4rem 0;
 }
 
 .main-container {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
@@ -34,6 +38,12 @@ body {
     "card-jean card-pat card-pat card-kira";
   margin: 0 auto;
   max-width: 111rem;
+  /* min-height: 57.2rem; */
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 2px 7px 20px 10px #d3dbe3;
 }
 
 .card--small {
@@ -44,10 +54,12 @@ body {
 }
 
 .card-dan {
+  background-color: var(--card-colour-violet);
   grid-area: card-dan;
 }
 
 .card-jon {
+  background-color: var(--card-colour-grayblue);
   grid-area: card-jon;
 }
 
@@ -60,29 +72,37 @@ body {
 }
 
 .card-pat {
+  background-color: var(--card-colour-blackblue);
   grid-area: card-pat;
 }
 
-.card--txt--colour {
+.card-jean,
+.card-kira {
+  background-color: var(--card-colour-white);
+}
+.card-dan,
+.card-jon {
+  /* padding-bottom: 3.2rem; */
+}
+.card-jean,
+.card-pat,
+.card-kira {
+  /* padding-bottom: 2.6rem; */
+}
+
+.card--txtcolour--white {
   color: white;
 }
 
-.card--colour--violet {
-  background-color: var(--card-colour-violet);
-}
-.card--colour--grayblue {
-  background-color: var(--card-colour-grayblue);
-}
-.card--colour--blackblue {
-  background-color: var(--card-colour-blackblue);
-}
-.card--colour--white {
-  background-color: var(--card-colour-white);
+.person__container {
+  /* border: 1px solid peru; */
+  padding: 2.6rem 3.2rem 2.6rem 3.2rem;
 }
 
-.person__container {
-  border: 1px solid peru;
-  padding: 2.6rem 3.2rem 3.2rem;
+.person__details__container {
+  display: flex;
+  gap: 1.7rem;
+  padding-bottom: 1.8rem;
 }
 
 .name__details {
@@ -95,14 +115,20 @@ body {
   max-width: 2.8rem;
 }
 
-.person__details__container {
-  display: flex;
+.name {
+  font-size: 1.4rem;
 }
 
-.card__text {
-  font-size: 2rem;
-  padding-bottom: 2.4rem;
+.status {
+  opacity: 0.5;
 }
 .card__quote {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  opacity: 0.7;
+}
+.card__text {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 2.4rem;
 }
