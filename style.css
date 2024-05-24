@@ -1,9 +1,9 @@
 :root {
   /* Primary colors */
-  --card-colour-violet: hsl(263, 55%, 52%);
-  --card-colour-grayblue: hsl(217, 19%, 35%);
-  --card-colour-blackblue: hsl(219, 29%, 14%);
-  --card-colour-white: hsl(0, 0%, 100%);
+  --colour-violet: hsl(263, 55%, 52%);
+  --colour-grayblue: hsl(217, 19%, 35%);
+  --colour-blackblue: hsl(219, 29%, 14%);
+  --colour-white: hsl(0, 0%, 100%);
 
   /* Neutral */
   --main-bg-colour: hsl(210, 46%, 95%);
@@ -32,7 +32,8 @@ body {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2 1fr);
+  /* grid-template-rows: 1fr 28rem; */
   grid-template-areas:
     "card-dan card-dan card-jon card-kira"
     "card-jean card-pat card-pat card-kira";
@@ -54,12 +55,12 @@ body {
 }
 
 .card-dan {
-  background-color: var(--card-colour-violet);
+  background-color: var(--colour-violet);
   grid-area: card-dan;
 }
 
 .card-jon {
-  background-color: var(--card-colour-grayblue);
+  background-color: var(--colour-grayblue);
   grid-area: card-jon;
 }
 
@@ -72,22 +73,17 @@ body {
 }
 
 .card-pat {
-  background-color: var(--card-colour-blackblue);
+  background-color: var(--colour-blackblue);
   grid-area: card-pat;
 }
 
 .card-jean,
 .card-kira {
-  background-color: var(--card-colour-white);
+  background-color: var(--colour-white);
 }
-.card-dan,
-.card-jon {
-  /* padding-bottom: 3.2rem; */
-}
-.card-jean,
-.card-pat,
-.card-kira {
-  /* padding-bottom: 2.6rem; */
+
+.card--text-colorgrayblue {
+  color: var(--colour-grayblue);
 }
 
 .card--txtcolour--white {
@@ -120,6 +116,7 @@ body {
 }
 
 .status {
+  font-size: 1.2rem;
   opacity: 0.5;
 }
 .card__quote {
@@ -131,4 +128,18 @@ body {
   font-size: 2rem;
   font-weight: 600;
   padding-bottom: 2.4rem;
+}
+
+/* Maedia Queries */
+
+@media (max-width: 900px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 32.8rem;
+  }
 }
